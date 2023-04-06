@@ -2,7 +2,7 @@ public class Pin {
     double x;
     double y;
     double value;
-    public Pin(double x, double y, double value){
+    public Pin(double x, double y, double value) {
         this.x=x;
         this.y=y;
         this.value = value;

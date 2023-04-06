@@ -1,0 +1,11 @@
+TO DO LIST:
+- find a way to incorporate the size of the virtual bot when making pathing canculations
+    + so that the sides won't hit any barriers
+    + may have a problem with bot finding spaces that are optimal but it would get stuck in
+        # ie: gets stuck trying to go between 2 poles
+
+- find a way to make the fields out of image files
+    + use dif in red and green values as values, G-R=value
+
+- make a virtual bot to move through the field and find the optimal path
+    + this is for testing
