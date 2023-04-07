@@ -10,9 +10,20 @@ public class pathMaking extends pathMath {
     }
     public Pin[] look(Pin curLocation){//makes an ArrayList of all points that are in range/"sight"
         ArrayList<Pin> canSee = new ArrayList<>();
-        
-        getDist(curLocation, field_map.getFIELD(1,1/*some point x,y */))
-        while()
-        
+        //x dimension of the square that we look at before finding the exact Dist
+        int x = (int) Math.floor((-.5 * virtualBot.getSideLengthX())+(-1 * sightDist));
+        for(x; x<sightDist+(.5 * virtualBot.getSideLengthX()); x++){
+            //these two for loops will look through all points that are sightDist from the side of the bot
+            int y = (int) Math.floor((-.5 * virtualBot.getSideLengthY())+(-1 * sightDist));
+            for(y; y<sightDist+(.5 * virtualBot.getSideLengthY()); y++){
+                
+                if(!(x>=(curLocation.getX()-(.5*virtualBot.getSideLengthX())) && x<=(curLocation.getX()+(.5*virtualBot.getSideLengthX())) && y>=(curLocation.getY()-(.5*virtualBot.getSideLengthY())) && y<=(curLocation.getY()-(.5*virtualBot.getSideLengthY())))){
+                    canSee.add(field_map.getFIELD(x,y));
+                
+                }
+            }
+        }
+        Pin[] goodPins = canSee.toArray(new Pin[0]);
+        return goodPins;
     }
 }

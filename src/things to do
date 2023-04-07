@@ -1,4 +1,5 @@
 TO DO LIST:
+
 - find a way to incorporate the size of the virtual bot when making pathing canculations
     + so that the sides won't hit any barriers
     + may have a problem with bot finding spaces that are optimal but it would get stuck in

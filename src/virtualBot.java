@@ -1,6 +1,6 @@
 public class virtualBot {
-    double sideLengthX;// sideLength should be in inchs, over estmate if messurments can't be exact
-    double sidelengthY;
+    static double sideLengthX;// sideLength should be in inchs, over estmate if messurments can't be exact
+    static double sidelengthY;
     double startAngle;//up/north is aprox = 1.57079632679 rad or PI/2 rad
     
     public virtualBot(double sideLengthX, double sideLengthY, double startAngle) {
@@ -12,14 +12,14 @@ public class virtualBot {
     public virtualBot(){
         this.sideLengthX = 10;
         this.sidelengthY = 10;
-        this.startAngle = Math.PI/2; // this is perfictly up/north
+        this.startAngle = Math.PI/2; // this is perfectly up/north
     }
     
-    public double getSideLengthX() {
+    public static double getSideLengthX() {
         return sideLengthX;
     }
     
-    public double getSidelengthY() {
+    public static double getSideLengthY() {
         return sidelengthY;
     }
     
