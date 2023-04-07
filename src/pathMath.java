@@ -1,5 +1,5 @@
 
-public class pathMath {// general math for calculationg path movments and things about the path
+public class pathMath{// general math for calculationg path movments and things about the path
     public double getDist(Pin pin1, Pin pin2) {//distance between 2 pins, ang in rad's from X axis
         double ang, dist;
         dist = Math.sqrt(Math.pow((pin2.getX() - pin1.getX()), 2) + Math.pow((pin2.getY() - pin1.getY()), 2));
