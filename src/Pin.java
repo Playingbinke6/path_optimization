@@ -7,6 +7,10 @@ public class Pin {
         this.y=y;
         this.value = value;
     }
+    public Pin(double x, double y) {
+        this.x=x;
+        this.y=y;
+    }
     public Pin(double value){
         this.value = value;
     }

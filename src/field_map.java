@@ -19,7 +19,7 @@ public class field_map {
             //bot starts at (1, 1)
 };//starter map, 14x14 = two ticks per mat with outside for walls
     
-    public static Pin[][] FIELD;// the 2D array of Pin obj's
+    public Pin[][] FIELD;// the 2D array of Pin obj's
     
     public field_map(int x, int y) {// turns the test field of values above in to a 2D array of Pin obj's
         FIELD = new Pin[x][y];
@@ -32,11 +32,11 @@ public class field_map {
         
     }
     
-    public static Pin[][] getFIELD() {
+    public Pin[][] getFIELD() {
         return FIELD;
     }
     
-    public static Pin getFIELD(int x, int y){
+    public Pin getFIELD(int x, int y){
         return FIELD[x][y];
     }
 }

@@ -1,6 +1,6 @@
 TO DO LIST:
 
-- find a way to incorporate the size of the virtual bot when making pathing canculations
+- find a way to incorporate the size of the virtual bot when making pathing calculations; aka during the move not just at destination
     + so that the sides won't hit any barriers
     + may have a problem with bot finding spaces that are optimal but it would get stuck in
         # ie: gets stuck trying to go between 2 poles
@@ -10,3 +10,7 @@ TO DO LIST:
 
 - make a virtual bot to move through the field and find the optimal path
     + this is for testing
+
+- make tracking for more free form bots with entering points reletive to the "center" of the bot
+    + then for something like look() have it cal the relevent points from those said points
+    + this could also flow in to arm tracking and bots expanding
