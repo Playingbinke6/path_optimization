@@ -25,4 +25,9 @@ public class Pin {
     public double getValue(){
         return value;
     }
+
+    public String ToString() {
+        String ans = x + ", " + y + ", " + value + ", ";
+        return ans;
+    }
 }

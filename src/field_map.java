@@ -26,7 +26,8 @@ public class field_map {
         for (int i=0; i< MAP1.length; i++) {
             for (int j=0; j<MAP1[i].length; j++) {
                 Pin pin = new Pin(i, j, MAP1[i][j]);
-            
+//                System.out.println(pin.ToString());
+                FIELD[i][j] = pin;
             }
         }
         
@@ -37,6 +38,7 @@ public class field_map {
     }
     
     public Pin getFIELD(int x, int y){
+//        System.out.println(FIELD[x][y]);
         return FIELD[x][y];
     }
 }

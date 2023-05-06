@@ -17,7 +17,7 @@ public class pathMaking extends pathMath {
             //these two for loops will look through all points that are safeSpace from the side of the bot
             int y = (int) Math.floor((-.5 * virtualBot.getSideLengthY()) + (-1 * virtualBot.getSafeSpace()));
             for (y = y; y < virtualBot.getSafeSpace() + (virtualBot.getSideLengthY() / 2); y++) {
-                if(field_map.getFIELD(x,y).getValue()<0){//anything negative is a hard wall
+                if(x>=0 && y>=0 && field_map.getFIELD(x,y).getValue()<0){//anything negative is a hard wall
                     return false;
                 }
             }
@@ -37,12 +37,26 @@ public class pathMaking extends pathMath {
             int y = (int) Math.floor((-.5 * virtualBot.getSideLengthY())+(-1 * virtualBot.getSightDist()));
             for(y=y; y<virtualBot.getSightDist()+(virtualBot.getSideLengthY()/2); y++){
                 
-                if(!(x>=(curLocation.getX()-(virtualBot.getSideLengthX()/2)) && x<=(curLocation.getX()+(virtualBot.getSideLengthX()/2)) && y>=(curLocation.getY()-(virtualBot.getSideLengthY()/2)) && y<=(curLocation.getY()-(virtualBot.getSideLengthY()/2)))){
+                if(!(x>=(curLocation.getX()-(virtualBot.getSideLengthX()/2)) &&
+                        x<=(curLocation.getX()+(virtualBot.getSideLengthX()/2)) &&
+                        y>=(curLocation.getY()-(virtualBot.getSideLengthY()/2)) &&
+                        y<=(curLocation.getY()-(virtualBot.getSideLengthY()/2))) &&
+                        y>=0 && x>=0
+                ){
+
                     canSee.add(field_map.getFIELD(x,y));
-                
+//                    System.out.println(field_map.getFIELD(x,y) + " <- this is what canSee should be");
+//                    System.out.println(x + ", " + y + " <- x, y");
                 }
             }
         }
-        return canSee.toArray(new Pin[0]);
+        Pin[] ans = new Pin[canSee.size()];
+        for(int i=0; i< canSee.size(); i++) {
+            ans[i] = canSee.get(i);
+//            System.out.println(canSee.get(i) + " <-this is the canSee array");
+//            System.out.println(ans[i] + " <-this is the ans array");
+        }
+
+        return ans;
     }
 }

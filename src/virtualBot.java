@@ -36,7 +36,7 @@ public class virtualBot {//contains the information of the robot
         return new double[]{dist, angle};
     }
     
-    private void setCurLocation(Pin newPos) {
+    void setCurLocation(Pin newPos) {
         curLocation = newPos;
     }
     
